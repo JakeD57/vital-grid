@@ -1,0 +1,516 @@
+      /*---------*/
+        /*CSS RESET
+        /*---------*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /*---------------*/
+        /*GENERAL STYLING
+        /*----------------*/
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 10px;
+        }
+
+        h1, h2, h3 {
+            margin-top: 0;
+            margin: 0;
+        }
+
+        p {
+            line-height: 1.6 !important;
+            margin-bottom: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        body {
+            background: #828890;
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            font-size: 1.6rem;
+        }
+
+
+        /*---------*/
+        /*ANIMATIONS
+        /*--------*/
+
+
+        @keyframes float {
+            0% {
+                transform: translate(0px, 0px);
+            }
+            50% {
+                transform: translate(-20px, -10px) scale(1.1);
+            }
+            100% {
+                transform: translate(0px, 0px) scale(1);
+            }
+            
+            
+            }
+
+            @keyframes floatside {
+                0% {
+                    transform: translate(0px,0px);
+                }
+                
+                50% {
+                    transform: translate(-20px, 10px) scale(0.9);
+                }
+                100% {
+                    transform: translate(0px, 0px) scale(1);
+                }
+                
+                
+                }
+
+                @keyframes pulse {
+                    0% {
+                        -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+                        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+                    }
+                    70% {
+                        -moz-box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+                        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+                    }
+                    100% {
+                        -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+                        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+                    }
+                }
+
+                @keyframes bounce {
+                    0%, 20%, 50%, 80%, 100% {
+                        transform: translateY(0);
+                    }
+                    40% {
+                        transform: translateY(-10px);
+                    }
+                    60% {
+                        transform: translateY(-8px);
+                    }
+                }
+
+
+        /*-------------------------------*/
+        /*STYLING THE MOBILE HAMBURGER NAV
+        /*-------------------------------*/
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: #ffffff;
+            padding: 0.6rem 1.4rem;
+        }
+
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            background: #141414;
+        }
+
+
+        /*---------------------*/
+        /*STYLING THE NAVIGATION
+        /*---------------------*/
+
+        header.header {
+            padding: 4rem 2rem;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+        section.header__wrapper {
+            display: flex;
+            justify-content: space-between;
+            max-width: 118rem;
+            margin: 0 auto;
+            align-items: center;
+            border-bottom: 0.2rem solid rgb(255 255 255 / 30%);
+            padding-bottom: 3rem;
+        }
+
+        ul.nav__list {
+            list-style: none;
+            display: flex;
+            gap: 3.4rem;
+            align-items: center;
+        }
+
+        a.nav__link {
+            color: #FCFCFC;
+            font-size: 1.6rem;
+            transition: all 0.3s;
+        }
+
+        a.nav__link::after {
+            content: "";
+            width: 4.6rem;
+            height: 0.2rem;
+            background: #ffffff;
+            display: block;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+
+        a.nav__link:hover::after {
+            content: "";
+            width: 4.6rem;
+            height: 0.2rem;
+            background: #ffffff;
+            display: block;
+            opacity: 1;
+        }
+
+        a.nav__link.active {
+            font-weight: 600;
+        }
+
+        a.nav__link.active::after {
+            content: "";
+            width: 4.6rem;
+            height: 0.2rem;
+            background: #ffffff;
+            display: block;
+            opacity: 1;
+            
+        }
+
+        a.logo {
+            font-size: 2rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        a.logo::before {
+            content: url(/Images/lightning-icon.png);
+            line-height: 1;
+        }
+
+        a.nav__btn {
+            background: white;
+            padding: 0.8rem 1.4rem;
+            color: #141414;
+            font-weight: 500;
+            border-radius: 0.2rem;
+            transition: all 0.3s;
+            opacity: 1;
+        }
+
+        a.nav__btn:hover {
+         opacity: 0.7;
+        }
+
+
+        /*-----------------------*/
+        /*STYLING THE HERO SECTION
+        /*-----------------------*/
+
+        section.hero {
+            background: linear-gradient(180deg, rgba(27, 28, 30, 0.53) 0%, rgba(0, 0, 0, 0.00) 100%), url(/Images/sustainability-bg.jpg);
+            min-height: 100vh;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding-top: 18.4rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-bottom: 4rem;
+            overflow: hidden;
+        }
+
+        section.hero__wrapper {
+            max-width: 118rem;
+            margin: 0 auto;
+        }
+
+        section.number {
+            display: flex;
+            gap: 0.2rem;
+            align-items: center;
+            margin-top: 4rem;
+            justify-content: flex-start;
+        }
+
+        p.number__left {
+            font-size: 39rem;
+            line-height: 0.8 !important;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+
+        p.number__right {
+            font-size: 39rem;
+            line-height: 0.8 !important;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+
+        p.number__middle {
+            font-size: 36rem;
+            line-height: 0.2 !important;
+            font-weight: 600;
+        }
+
+        p.hero__eyebrow {
+            font-size: 2.8rem;
+            letter-spacing: 0.2rem;
+            position: relative;
+            z-index: 1;
+            width: fit-content;
+        }
+
+        
+        p.hero__eyebrow::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2.4rem;
+            background: rgb(49 55 65 / 81%);
+            opacity: 0.6;
+            position: absolute;
+            z-index: -1;
+            top: 0.1rem;
+        }
+
+        p.powering__copy {
+            font-size: 4.8rem;
+            max-width: 88rem;
+            line-height: 1.2 !important;
+        }
+
+        section.powering {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 2.8rem;
+            margin-bottom: 4rem;
+            gap: 2rem;
+        }
+
+        a.powering__scroll {
+            font-size: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        a.hero__cta {
+            font-size: 3rem;
+            font-weight: 500;
+            border-bottom: 0.4rem solid #ffffff;
+            transition: all 0.3s;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        a.hero__cta:hover {
+            opacity: 0.7;
+            transform: scale(0.9);
+        }
+
+        i.fa-regular.fa-circle-down {
+            font-size: 3.2rem;
+        }
+
+        section.cta__container {
+            display: flex;
+            align-items: center;
+            gap: 1.6rem;
+        }
+
+        a.powering__scroll::after {
+            content: url(/Images/sustainability-arrow.svg);
+            display: block;
+            animation: bounce 2s infinite;
+        }
+
+        p.number__right::after {
+            content: "";
+            background: #ffffff;
+            height: 4rem;
+            width: 4rem;
+            display: block;
+            border-radius: 50%;
+            position: absolute;
+            right: -5.5rem;
+            bottom: 2.6rem;
+            animation: pulse 2s infinite;
+        }
+
+        p.number__right::before {
+            content: url(/Images/dots.graphic.svg);
+            position: absolute;
+            top: -20.9rem;
+            right: -4.4rem;
+            z-index: -1;
+            animation: float 4s cubic-bezier(0.85, 0.03, 0.17, 0.97) infinite;
+        }
+
+        p.number__left::before {
+            content: url(/Images/dots.graphic.svg);
+            position: absolute;
+            top: -0.9rem;
+            left: -4.4rem;
+            z-index: -1;
+            animation: floatside 5s cubic-bezier(0.85, 0.03, 0.17, 0.97) infinite;
+            animation-delay: 1s;
+        }
+
+
+        /*-----------*/
+        /*MEDIA QUERY
+        /*-----------*/
+
+        @media (max-width: 1280px) {
+        
+        }
+
+        @media (max-width: 1160px) {
+            p.number__right {
+                font-size: 32rem;
+              
+            }
+            
+            p.number__left {
+                font-size: 32rem;
+              
+            }
+        }
+
+        @media (max-width: 817px) {
+            p.number__right::before {
+                top: -10.9rem;
+                right: -5.4rem;
+            
+            }
+            }
+
+
+        @media (max-width: 992px) {
+            section.number {
+                flex-wrap: wrap;
+                gap: 2rem;
+            }
+
+            p.number__middle {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section.number {
+                text-align: center;
+                justify-content: center;
+            }
+
+            p.hero__eyebrow {
+                margin: 0 auto;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            nav.nav {
+                display: none;
+            }
+
+            section.powering {
+                flex-wrap: wrap;
+                justify-content: center;
+                text-align: center;
+            }
+
+            section.cta__container {
+                justify-content: center;
+                text-align: center;
+            }
+
+            p.hero__eyebrow::after {
+                top: -0.3rem;
+            }
+
+        }
+
+        @media (max-width: 440px) {
+            p.powering__copy {
+                font-size: 3.6rem;
+            }
+
+            a.hero__cta {
+                font-size: 2.8rem;
+            }
+
+            p.number__right {
+                font-size: 24rem;
+            }
+
+            p.number__left {
+                font-size: 24rem;
+            }
+
+            p.hero__eyebrow {
+                font-size: 2.4rem;
+            }
+
+            p.number__right::before {
+                top: -6.9rem;
+                right: -6.4rem;
+            }
+
+            p.number__right::after {
+                height: 2rem;
+                width: 2rem;
+                right: -2.6rem;
+                bottom: 1.8rem;
+            }
+        }
+
+        @media (max-width: 375px) {
+            p.hero__eyebrow {
+                font-size: 2rem;
+            }
+            p.hero__eyebrow::after {
+                top: -0.5rem;
+            }
+            }
+
+            @media (max-width: 320px) {
+                p.number__left {
+                    font-size: 20rem;
+                }
+                p.number__right {
+                    font-size: 20rem;
+                }
+                a.hero__cta {
+                    font-size: 2.4rem;
+                }
+                p.hero__eyebrow {
+                    font-size: 1.8rem;
+                }
+                p.hero__eyebrow::after {
+                    top: -0.6rem;
+                    height: 2rem;
+                }
+                }
+     
